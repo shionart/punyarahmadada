@@ -1,0 +1,304 @@
+﻿{% extends 'base.html' %}
+
+{% block title %} Indonesia Power Project {% endblock %}
+
+
+{% block body %}
+
+<div class="container">
+<form action="">
+		<div class="row">
+					<h1 class="fw-bold text-primary "> NEMESYS </h1>
+					<p class="fw-bold text-dark border-bottom"> ENERGY AND OPERATION MANAGMENT SYSTEM</p>
+				</div>
+			
+</form>
+	<form method="POST" action="/indeks/" style="width: 1000px; margin: left">
+		{% csrf_token %} 
+		<div class="row">
+			<div class="col">
+					<label for="targetkalor" class="col-form-label">Target Kalor</label>
+			</div>
+			<div class="col-md-4">
+					<input type="text" name="targetkalor" id="targetkalor" class="form-control">
+			</div>
+			<div class="col">
+					<label for="operator" class="col-form-label">Operator</label>
+			</div>
+			<div class="col-md-4">
+					<input type="text" name="operator" id="operator" class="form-control">
+			</div>
+			<div class="col">
+					<button type="submit" class="btn btn-primary">Nemesys</button>
+			</div>
+		</div>
+	</form>
+					
+<div class="row">
+		<div class="col-sm-4">
+			<div class="card bg-warning shadow p-3 mb-5 rounded">
+				<div class="card-litle m-0">
+					<h4 class="text-center mt-3"> Spesifikasi Batubara Pertama <h4>
+				</div>
+				<div class="card-body">
+						<div class="row mb-3">
+							<label for="pemasok" class="col-sm-5 col-form-label">Pemasok</label>
+							<div class="col-sm-7">
+								<input class="form-control text-center" type="text" placeholder="PLN BB LRC" aria-label="readonly input example" readonly>
+							</div>
+						</div>
+						<div class="row mb-3">
+							<label for="nilaikalor" class="col-sm-5 col-form-label">Nilai Kalor</label>
+							<div class="col-sm-7">
+								<input value="{{nilaikalor}}" class="form-control text-center" type="text" placeholder="0" aria-label="readonly input example" readonly>
+							</div>
+						</div>
+						<div class="row mb-3">
+							<label for="totalmoisture" class="col-sm-5 col-form-label">Total Moisture</label>
+							<div class="col-sm-7">
+								<input value="{{totalmoisture}}" class="form-control text-center" type="text" placeholder="0" aria-label="readonly input example" readonly>
+							</div>
+						</div>
+						<div class="row mb-3">
+							<label for="totalsulfur" class="col-sm-5 col-form-label">Total Sulfur</label>
+							<div class="col-sm-7">
+								<input value="{{totalsulfur}}" class="form-control text-center" type="text" placeholder="0" aria-label="readonly input example" readonly>
+							</div>
+						</div>
+						<div class="row mb-3">
+							<label for="ashcontent" class="col-sm-5 col-form-label">Ash Content</label>
+							<div class="col-sm-7">
+								<input class="form-control text-center" type="text" placeholder="0" aria-label="readonly input example" readonly>
+							</div>
+						</div>
+						<div class="row mb-3">
+							<label for="potensi" class="col-sm-5 col-form-label">Potensi Slagging</label>
+							<div class="col-sm-7">
+								<div class="spinner-grow text-danger" role="status">
+									<span class="visually-hidden">Loading...</span>
+								</div>
+							</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-4">
+			<div class="card bg-info shadow p-3 mb-5 rounded">
+				<div class="card-litle m-0">
+					<h4 class="text-center text-light mt-3 "> Spesifikasi Batubara Hasil Daerah <h4>
+				</div>
+				<div class="card-body">
+						<div class="row mb-3">
+							<label for="komposisi" class="col-sm-5 col-form-label text-light">Komposisi</label>
+							<div class="col-sm-7">
+								<input class="form-control text-center" type="text" placeholder="0" aria-label="readonly input example" readonly>
+							</div>
+						</div>
+						<div class="row mb-3">
+							<label for="nilaikalor" class="col-sm-5 col-form-label text-light">Nilai Kalor</label>
+							<div class="col-sm-7">
+								<input class="form-control text-center" type="text" placeholder="0" aria-label="readonly input example" readonly>
+							</div>
+						</div>
+						<div class="row mb-3">
+							<label for="totalmoisture" class="col-sm-5 col-form-label text-light">Total Moisture</label>
+							<div class="col-sm-7">
+								<input class="form-control text-center" type="text" placeholder="0" aria-label="readonly input example" readonly>
+							</div>
+						</div>
+						<div class="row mb-3">
+							<label for="totalsulfur" class="col-sm-5 col-form-label text-light">Total Sulfur</label>
+							<div class="col-sm-7">
+								<input class="form-control text-center" type="text" placeholder="0" aria-label="readonly input example" readonly>
+							</div>
+						</div>
+						<div class="row mb-3">
+							<label for="kadarabu" class="col-sm-5 col-form-label text-light">Kada Abu</label>
+							<div class="col-sm-7">
+								<input class="form-control text-center" type="text" placeholder="0" aria-label="readonly input example" readonly>
+							</div>
+						</div>
+						<div class="row mb-3">
+							<label for="excessair" class="col-sm-5 col-form-label text-light">Excess Air</label>
+							<div class="col-sm-7">
+								<input class="form-control text-center" type="text" placeholder="0" aria-label="readonly input example" readonly>
+							</div>
+						</div>
+						<div class="row mb-3">
+							<label for="afr" class="col-sm-5 col-form-label text-light">AFRt</label>
+							<div class="col-sm-7">
+								<input class="form-control text-center" type="text" placeholder="0" aria-label="readonly input example" readonly>
+							</div>
+						</div>
+						<div class="row mb-3">
+							<label for="mot" class="col-sm-5 col-form-label text-light">MOT</label>
+							<div class="col-sm-7">
+								<input class="form-control text-center" type="text" placeholder="0" aria-label="readonly input example" readonly>
+							</div>
+						</div>
+						<div class="row mb-3">
+							<label for="tiltingburner" class="col-sm-5 col-form-label text-light">Tilting Burner</label>
+							<div class="col-sm-7">
+								<input class="form-control text-center" type="text" placeholder="0" aria-label="readonly input example" readonly>
+							</div>
+						</div>
+						<div class="row mb-3">
+							<label for="potensi" class="col-sm-5 col-form-label text-light">Potensi Slagging</label>
+							<div class="col-sm-7">
+								<div class="spinner-grow text-success" role="status">
+									<span class="visually-hidden">Loading...</span>
+								</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-4">
+			<div class="card bg-primary shadow p-3 mb-5 rounded">
+				<div class="card-litle m-0">
+					<h4 class="text-center text-light mt-3 "> Spesifikasi Batubara Kedua <h4>
+				</div>
+				<div class="card-body">
+						<div class="row mb-3">
+							<label for="pemasok" class="col-sm-5 col-form-label text-light">Pemasok</label>
+							<div class="col-sm-7">
+								<input class="form-control text-center" type="text" placeholder="0" aria-label="readonly input example" readonly>
+							</div>
+						</div>
+						<div class="row mb-3">
+							<label for="nilaikalor" class="col-sm-5 col-form-label text-light">Nilai Kalor</label>
+							<div class="col-sm-7">
+								<input class="form-control text-center" type="text" placeholder="0" aria-label="readonly input example" readonly>
+							</div>
+						</div>
+						<div class="row mb-3">
+							<label for="totalmoisture" class="col-sm-5 col-form-label text-light">Total Moisture</label>
+							<div class="col-sm-7">
+								<input class="form-control text-center" type="text" placeholder="0" aria-label="readonly input example" readonly>
+							</div>
+						</div>
+						<div class="row mb-3">
+							<label for="totalsulfur" class="col-sm-5 col-form-label text-light">Total Sulfur</label>
+							<div class="col-sm-7">
+								<input class="form-control text-center" type="text" placeholder="0" aria-label="readonly input example" readonly>
+							</div>
+						</div>
+						<div class="row mb-3">
+							<label for="ashcontent" class="col-sm-5 col-form-label text-light">Ash Content</label>
+							<div class="col-sm-7">
+								<input class="form-control text-center" type="text" placeholder="0" aria-label="readonly input example" readonly>
+							</div>
+						</div>
+						<div class="row mb-3">
+							<label for="potensi" class="col-sm-5 col-form-label text-light">Potensi Slagging</label>
+							<div class="col-sm-7">
+								<div class="spinner-grow text-warning" role="status">
+									<span class="visually-hidden">Loading...</span>
+								</div>
+							</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+<div class="row">
+		<div class="col-sm-7">
+			<div class="card bg-body shadow p-3 mb-5 rounded">
+				<div class="card-litle m-0">
+					<h4 class="fw-bold text-primary">Pengaturan Secondary Alr Damper</h4>
+				</div>
+				<div class="card body">
+				<div class="table-responsive">
+					<table class="table table-striped table-sm">
+					<thead>
+						<tr>
+						  <th></th>
+						  <th>Nama Parameter</th>
+						  <th>Tipe Data</th>
+						  <th>Keterangan</th>
+						</tr>
+					</thead>
+						  <tbody>
+							<tr>
+							  <td>AA</td>
+							  <td>random</td>
+							  <td>data</td>
+							  <td>placeholder</td>
+							</tr>
+							<tr>
+							  <td>AB</td>
+							  <td>placeholder</td>
+							  <td>irrelevant</td>
+							  <td>visual</td>
+							</tr>
+							<tr>
+							  <td>CD</td>
+							  <td>data</td>
+							  <td>rich</td>
+							  <td>dashboard</td>
+							</tr>
+							<tr>
+							  <td>EF</td>
+							  <td>information</td>
+							  <td>placeholder</td>
+							  <td>illustrative</td>
+							</tr>
+							<tr>
+							  <td>FF</td>
+							  <td>text</td>
+							  <td>random</td>
+							  <td>layout</td>
+							</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-5">
+			<div class="card bg-body shadow p-3 mb-5 rounded">
+				<div class="card-litle m-0">
+					<h4 class="fw-bold text-primary text-center">Keterangan Potensi Slagging</h4>
+						<div class="row">
+								<div class="col-md-3">
+										<label for="low" class="col-form-label">Low</label>
+								</div>
+								<div class="spinner-grow text-success" role="status">
+									<span class="visually-hidden">Loading...</span>
+								</div>
+								<div class="col-md-3">
+										<label for="medium" class="col-form-label">Medium</label>
+								</div>
+								<div class="spinner-grow text-warning" role="status">
+									<span class="visually-hidden">Loading...</span>
+								</div>
+								<div class="col-md-3">
+										<label for="high" class="col-form-label">High</label>
+								</div>
+								<div class="spinner-grow text-danger" role="status">
+									<span class="visually-hidden">Loading...</span>
+								</div>
+							</div>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<h3 class="fw-bold text-primary text-center">Unit</h3>
+				<input type="range" class="form-range" min="0 button-danger" max="5" step="2.5" id="customRange3">
+			<div class="row">
+				<div class="col-md-5">
+				<label for="low" class="col-form-label">Unit 1</label>
+				</div>
+				<div class="col-md-4">
+				<label for="low" class="col-form-label">Unit 2</label>
+				</div>
+				<div class="col-md-3">
+				<label for="low" class="col-form-label">Unit 3</label>
+				</div>
+		</div>
+	</div>
+	
+
+
+
+{% endblock %}
