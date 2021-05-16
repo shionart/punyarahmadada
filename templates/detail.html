@@ -4,7 +4,13 @@
 
 
 {% block body %}
-
+<div>
+	
+	
+	{{pemasok1}}
+	{{pemasok2}}
+</div>
+	
 <div class="container">
 <form action="">
 		<div class="row">
@@ -31,38 +37,39 @@
 						  <tbody>
 							<tr>
 							  <td>Pemasok</td>
-							  <td>0</td>
-							  <td>0</td>
+							  <td> {{pemasok1.Pemasok}} </td>
+							  <td> {{pemasok2.Pemasok}} </td>
 							  <td>0r</td>
 							</tr>
 								<tr>
 							  <td>Nilai Kalor</td>
-							  <td>0</td>
-							  <td>0</td>
+							  <td> {{pemasok1.Kalori}} </td>
+							  <td> {{pemasok2.Kalori}} </td>
 							  <td>0r</td>
 							</tr>
 								<tr>
 							  <td>Total Moisture</td>
-							  <td>0</td>
-							  <td>0</td>
+							  <td> {{pemasok1.TM}} </td>
+							  <td> {{pemasok2.TM}} </td>
 							  <td>0r</td>
 							</tr>
 								<tr>
 							  <td>Total Sulfur</td>
-							  <td>0</td>
-							  <td>0</td>
+							  <td> {{pemasok1.TS}} </td>
+							  <td> {{pemasok2.TS}} </td>
 							  <td>0r</td>
 							</tr>
 								<tr>
 							  <td>Kadar Abu</td>
-							  <td>0</td>
-							  <td>0</td>
+							  <td> {{pemasok1.ASH}} </td>
+							  <td> {{pemasok2.ASH}} </td>
 							  <td>0r</td>
 							</tr>
 							</tr>
 								<tr>
 							  <td>IDT</td>
-							  <td>0</td>
+							  <!-- TODO BENERIN KEY DARI JSONNYA & MAPPING DI SINI -->
+							  <td> {{pemasok1.4}} </td>
 							  <td>0</td>
 							  <td>0r</td>
 							</tr>

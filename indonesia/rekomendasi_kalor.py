@@ -70,8 +70,8 @@ Preq=700
 coef_pembebanan =[(15.59,443872.57,8854230.19),(432.52,228835.28,26186478.79),(928.68,-130876.67,81788363.85)]
 min_dn = 200
 max_dn = 315
-P= optimasi_beban_unit(coef_pembebanan,Preq,min_dn,max_dn)
+# P= optimasi_beban_unit(coef_pembebanan,Preq,min_dn,max_dn)
 
 
-for idx, v in enumerate(P):
-    print(f'P({idx}): {v}')
+# for idx, v in enumerate(P):
+#     print(f'P({idx}): {v}')

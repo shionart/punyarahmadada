@@ -31,8 +31,25 @@ def indeks (request):
 	return render(request, 'indeks.html', konteks)
 
 def detail (request):
-
-	konteks = {}
+	with open('Z:\projectWeb\django\project\data_blending.json') as f:
+		samlekom = json.load(f)
+	
+	# result = the_dict   
+	# for key in keys:     
+	# 	if hasattr(result, 'get'):       
+	# 		result = result.get(key, '')     
+	# 	else:       
+	# 		break   
+	# 	return result
+	konteks = {
+		'pemasok1' : samlekom[0],
+		'pemasok2' : samlekom[1]
+	}
+	
+	
+	
+	# print("nomor : "+str(pemasok1['Pemasok']))
+	# return samlekom
 	return render(request, 'detail.html', konteks)
 
 def tabeel (request):
