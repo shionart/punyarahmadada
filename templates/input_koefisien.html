@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block title %} Indonesia Power Project {% endblock %}
+
+
+{% block body %}
+
+<div class="container">
+<form action="">
+		<div class="row">
+					<h1 class="fw-bold text-primary "> NEMESYS </h1>
+					<p class="fw-bold text-dark border-bottom"> ENERGY AND OPERATION MANAGMENT SYSTEM</p>
+				</div>
+
+</form>
+	<form method="POST" action="/insertDb" style="width: 1000px; margin: left">
+		{% csrf_token %}
+		<div class="row-md-6">
+			<div class="col">
+					<label for="namaunit" class="col-form-label">Nama Unit Pembangkit</label>
+			</div>
+			<div class="col-md-4">
+					<input type="text" name="namaunit" id="namaunit" class="form-control">
+			</div>
+		</div>
+        <div class="row-md-6">
+			<div class="col">
+					<label for="a" class="col-form-label">Koefisien a</label>
+			</div>
+			<div class="col-md-4">
+					<input type="text" name="a" id="a" class="form-control">
+			</div>
+		</div>
+                <div class="row-md-6">
+			<div class="col">
+					<label for="b" class="col-form-label">Koefisien b</label>
+			</div>
+			<div class="col-md-4">
+					<input type="text" name="b" id="b" class="form-control">
+			</div>
+		</div>
+        <div class="row-md-6">
+			<div class="col">
+					<label for="c" class="col-form-label">Koefisien b</label>
+			</div>
+			<div class="col-md-4">
+					<input type="text" name="c" id="c" class="form-control">
+			</div>
+		</div>
+        <div class="row-md-4">
+            <button type="submit" class="btn btn-primary">Save</button>
+		</div>
+
+    </form></div>
+
+    {% endblock %}

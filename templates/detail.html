@@ -1,0 +1,188 @@
+﻿{% extends 'base.html' %}
+
+{% block title %} Indonesia Power Project {% endblock %}
+
+
+{% block body %}
+<div>
+	
+	
+<!--	{{pemasok1}}
+	{{pemasok2}}-->
+</div>
+	
+<div class="container">
+<form action="">
+		<div class="row">
+					<h1 class="fw-bold text-primary ">  </h1>
+					<p class="fw-bold text-dark border-bottom"> </p>
+				</div>
+<div class="row">
+		<div class="col-sm-12">
+			<div class="card bg-body shadow p-3 mb-5 rounded">
+				<div class="card-litle m-0">
+					<h4 class="fw-bold text-primary">Pengaturan Secondary Alr Damper</h4>
+				</div>
+				<div class="card body">
+				<div class="table-responsive">
+					<table class="table table-striped table-sm">
+					<thead>
+						<tr>
+						  <th>Parameter</th>
+						  <th>Pemasok Pertama</th>
+						  <th>Pemasok Kedua</th>
+						  <th>Blending</th>
+						</tr>
+					</thead>
+						  <tbody>
+							<tr>
+							  <td>Pemasok</td>
+							  <td> {{pemasok1.Pemasok}} </td>
+							  <td> {{pemasok2.Pemasok}} </td>
+							  <td>0r</td>
+							</tr>
+								<tr>
+							  <td>Nilai Kalor</td>
+							  <td> {{pemasok1.Kalori}} </td>
+							  <td> {{pemasok2.Kalori}} </td>
+							  <td>0r</td>
+							</tr>
+								<tr>
+							  <td>Total Moisture</td>
+							  <td> {{pemasok1.TM}} </td>
+							  <td> {{pemasok2.TM}} </td>
+							  <td>0r</td>
+							</tr>
+								<tr>
+							  <td>Total Sulfur</td>
+							  <td> {{pemasok1.TS}} </td>
+							  <td> {{pemasok2.TS}} </td>
+							  <td>0r</td>
+							</tr>
+								<tr>
+							  <td>Kadar Abu</td>
+							  <td> {{pemasok1.ASH}} </td>
+							  <td> {{pemasok2.ASH}} </td>
+							  <td>0r</td>
+							</tr>
+							</tr>
+								<tr>
+							  <td>IDT</td>
+							  <!-- TODO BENERIN KEY DARI JSONNYA & MAPPING DI SINI -->
+							  <td> {{pemasok1.IDT_Reducing}} </td>
+							  <td> {{pemasok2.IDT_Reducing}} </td>
+							  <td>0r</td>
+							</tr>
+							</tr>
+								<tr>
+							  <td>SiO2</td>
+							  <td>{{pemasok1.SiO2}}</td>
+							  <td>{{pemasok2.SiO2}}</td>
+							  <td>0r</td>
+							</tr>
+							</tr>
+								<tr>
+							  <td>Al2O3</td>
+							  <td>{{pemasok1.Al2O3}}</td>
+							  <td>{{pemasok2.Al2O3}}</td>
+							  <td>0r</td>
+							</tr>
+							</tr>
+								<tr>
+							  <td>Fe2O3</td>
+							  <td>{{pemasok1.Fe2O3}}</td>
+							  <td>{{pemasok2.Fe2O3}}</td>
+							  <td>0r</td>
+							</tr>
+							</tr>
+								<tr>
+							  <td>CaO</td>
+							  <td>{{pemasok1.CaO}}</td>
+							  <td>{{pemasok2.CaO}}</td>
+							  <td>0r</td>
+							</tr>
+							</tr>
+								<tr>
+							  <td>MgO</td>
+							  <td>{{pemasok1.MgO}}</td>
+							  <td>{{pemasok2.MgO}}</td>
+							  <td>0r</td>
+							</tr>
+							</tr>
+								<tr>
+							  <td>Na2O</td>
+							  <td>{{pemasok1.Na2O}}</td>
+							  <td>{{pemasok2.Na2O}}</td>
+							  <td>0r</td>
+							</tr>
+							</tr>
+								<tr>
+							  <td>K2O</td>
+							  <td>{{pemasok1.K2O}}</td>
+							  <td>{{pemasok2.K2O}}</td>
+							  <td>0r</td>
+							  </tr>
+							<tr>
+							  <td>TiO2</td>
+							  <td>{{pemasok1.TiO2}}</td>
+							  <td>{{pemasok2.TiO2}}</td>
+							  <td>0r</td>
+							</tr>
+							<tr>
+							  <td>HT Max</td>
+							  <td>{{pemasok1.HT_max}}</td>
+							  <td>{{pemasok2.HT_max}}</td>
+							  <td>0r</td>
+							</tr>
+							<tr>
+							  <td>Jenis Abu</td>
+							  <td>{{pemasok1.Jenis_Abu}}</td>
+							  <td>{{pemasok2.Jenis_Abu}}</td>
+							  <td>0r</td>
+							</tr>
+							<tr>
+							  <td>Slagging index</td>
+							  <td>{{pemasok1.SI}}</td>
+							  <td>{{pemasok2.SI}}</td>
+							  <td>0r</td>
+							</tr>
+							<tr>
+							  <td>Potensi slagging</td>
+							  <td>{{pemasok1.Slagging}}</td>
+							  <td>{{pemasok2.Slagging}}</td>
+							  <td>0r</td>
+							</tr>
+							<tr>
+							  <td>Carbon content</td>
+							  <td>{{pemasok1.C}}</td>
+							  <td>{{pemasok2.C}}</td>
+							  <td>0r</td>
+							</tr>
+							<tr>
+							  <td>Hydrogen content</td>
+							  <td>{{pemasok1.H}}</td>
+							  <td>{{pemasok2.H}}</td>
+							  <td>0r</td>
+							</tr>
+							<tr>
+							  <td>Nitrogen content</td>
+							  <td>{{pemasok1.N}}</td>
+							  <td>{{pemasok2.N}}</td>
+							  <td>0r</td>
+							</tr>
+							<tr>
+							  <td>Oxygen content</td>
+							  <td>{{pemasok1.O}}</td>
+							  <td>{{pemasok2.O}}</td>
+							  <td>0r</td>
+							</tr>
+							</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+{% endblock %}
